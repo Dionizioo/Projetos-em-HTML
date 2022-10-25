@@ -1,0 +1,124 @@
+    body {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        margin: 10px;
+        border: 3px solid #062C30;
+    }
+    
+    .cabecalho,.rodape {
+        background-color:#062C30;
+    }
+    
+    .cabecalho p {
+        font-size: 36px;
+        font-weight: bold;
+        padding: 10px;
+        text-align: center;
+        color: aliceblue;
+    }
+    
+    .rodape p {
+        padding: 10px;
+        font-size: 14px;
+        text-align: center;
+        color: #dddddd;
+    }
+    
+    .titu p {
+        font-size: 15px;
+        text-align: center;
+        display: inline;
+        color:#062C30;
+    }
+    
+    .topnav {
+        background-color:#05595B
+    }
+    
+    .topnav li {
+        display: inline;
+    }
+    
+    .topnav li#sobre {
+        float: right;
+    }
+    
+    .topnav a {
+        height: 20px;
+        color:aliceblue;
+        /** deixar sublinado **/
+        transition: .5s;
+        /**deixar o bagulho com efeito **/
+    }
+    
+    .topnav a:hover {
+        background-color: #dddddd;
+        color: #000000;
+    }
+    
+    .topmain img {
+        text-align: center;
+        display:inline;
+        height: 300px;
+    }
+    
+    .topmain h1 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 30px;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .topmain {
+        font-size: medium;
+        text-align: center;
+        padding: 10px;
+        padding-bottom: 10px;
+        display: block;
+        background-color:#E2D784;
+    }
+    
+    .topmain h2 {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .topmain p {
+        text-align: center;
+        text-align: justify;
+        line-height: 1, 5;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    table#detalhes {
+        border: 1px solid rgb(5, 197, 255);
+        margin: 20px auto 20px auto;
+    }
+    
+    table#detalhes caption {
+        font-size: 14px;
+        font-weight: bold;
+        padding: 10px;
+    }
+    
+    table#detalhes td {
+        font-size: 12px;
+        border: 1px salmon;
+        padding: 10px;
+    }
+    
+    table#detalhes td.ce {
+        background-color: #05595B;
+        color: #dddddd;
+        text-align: right;
+    }
+    
+    table#detalhes td.cd {
+        background-color: #062C30;
+        color: #dddddd;
+        text-align: left;
+    }
