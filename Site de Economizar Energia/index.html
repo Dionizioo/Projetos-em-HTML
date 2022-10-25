@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desenvolvimento Web Básico</title>
+</head>
+<Style>
+#imagem{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+#texto_prin{
+    text-align: center;
+    color: rgb(59, 104,186);
+    margin-bottom: 10px;
+    font-size: 50px;
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#texto_secun{
+    color: rgb(59, 104,186);
+    margin-bottom: 10px;
+    font-size: 40px;
+    text-align: center;
+}
+#texto_terc{
+    color:crimson;
+    text-align: center;
+    font-size: 25px;
+}
+p{
+font-size: 30px;
+}
+p,h2,h3{
+    text-align: justify;
+}
+h3{
+    font-size: 30px;
+    color: rgb(59, 104,186);
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+#lampada{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+#cont{
+    text-align: center;
+}
+footer{
+    color: white;
+    background-color: rgb(59, 104,186);
+    margin-right: 20px;
+
+}
+#rodape{
+    text-align: center;
+    padding: 15px;
+}
+.botao{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    text-align: center;
+}
+</Style>
+
+<script>
+    var cont = 0;
+    var cont_apagada = 0;
+    var cont_ligada = 0;
+    var cont_quebrou = 0;
+    
+    function alterarestado() {
+        cont++;
+        document.getElementById('cont').innerText=`Total de acendimentos:${cont}`;
+
+
+    	var lampada = document.getElementById('lampada');
+
+    	if(lampada.classList.contains("apagada")) {
+
+        cont_ligada++;
+        document.getElementById('cont_ligada').innerHTML=`Quantas vezes a Lampada ficou Ligada:${cont_ligada}`;
+
+    		lampada.classList.add("ligada");
+
+    		lampada.classList.remove("apagada");
+
+    		lampada.src = "lampada_ligada.jpeg";
+
+    	}else if(lampada.classList.contains("ligada")) {
+
+        cont_quebrou++;
+        document.getElementById('cont_quebrou').innerHTML=`Quantas vezes a Lampada quebrou:${cont_quebrou}`;
+
+    		lampada.classList.add("quebrada");
+
+    		lampada.classList.remove("ligada");
+
+    		lampada.src = "lampada_quebrada.jpeg";
+    	}
+        else if(lampada.classList.contains("quebrada")) {
+
+        cont_apagada++;
+        document.getElementById('cont_apagada').innerHTML=`Quantas vezes a Lampada ficou Apagada:${cont_apagada}`;
+
+        lampada.classList.add("apagada");
+
+        lampada.classList.remove("quebrada");
+
+        lampada.src = "lampada_desligada.jpeg";
+        }
+    }
+</script>
+
+
+<body>
+
+    <img id="imagem" src="topo.jpeg" alt="Imagem principal">
+
+    <h1 id="texto_prin" >5 formas de economizar energia elétrica dentro de casa</h1>
+
+    <p>Cada vez mais, as pessoas estão buscando <b>formas de economizar energia elétrica.</b>Conforme levantamento, o Brasil está entre as nações com a energia mais cara. Além da
+        motivação financeira, há, ainda, a que envolve a sustentabilidade. pesquisas demonstram
+        que o brasileiro ocupa o terceiro lugar no ranking de povos com maior consciência e
+        preocupação com a sustentabilidade. A humanidade está passando por constantes crises
+        hídricas e energéticas, então é importante que tenha pessoas pensando no meio ambiente
+        ao mesmo tempo em que garantem economia de energia elétrica.
+        </p>
+
+    <p>É o seu caso? Então confira nossas dicas a seguir!</p>
+
+    <h2 id="texto_secun">Formas de economizar energia elétrica em seu dia a dia</h2>
+
+    <h3>1. Valorize a iluminação natural</h3>
+
+    <p>Entre as formas de economizar energia elétrica, a valorização da iluminação natural é uma das mais práticas e
+        benéficas. Por meio dessa iniciativa, é possível otimizar a capacidade de iluminação dos ambientes, reduzindo a
+        necessidade de ligar luzes artificiais e, ainda, ter mais conforto visual e bem-estar ao aumentar o contato com
+        a luz solar.
+
+    <p>Para isso, evite o bloqueio da luz natural feito por mobiliários mais robustos como estantes e roupeiros. Também
+        é recomendado pintar as paredes com cores claras, que ajudam a refletir melhor a iluminação do sol.</p>
+
+    <p>Ainda, apostar no uso de espelhos nas paredes, e até mesmo em móveis espelhados, é uma estratégia inteligente,
+        pois eles, além de gerarem uma sensação de amplitude, ajudam a iluminar os cômodos, refletindo luz. </p>
+
+    <h3>2. Troque suas lâmpadas</h3>
+
+    <p>Na hora de pensar em formas de economizar energia elétrica é preciso levar em conta a troca das lâmpadas de sua
+        residência. Isso porque esse tipo de iluminação é responsável por cerca de <b>20% do consumo total de energia de
+        uma casa.</b>  Por isso, é importante optar pelos modelos que demandem menor consumo.</p>
+
+    <p>As lâmpadas incandescentes estão entre os modelos que devem ser trocados, visto serem os que mais consomem
+        energia. Já as lâmpadas de LED tem melhor custo x benefício, já que são 80% mais econômicas do que as
+        incandescente e 30% mais econômicas do que as fluorescentes.</p>
+
+    <h3>3. Tire os aparelhos eletrônicos da tomada</h3>
+
+    <p>Há algumas pessoas que pensam que é mito, mas o fato é que tirar os aparelhos eletrônicos da tomada pode
+        realmente reduzir o consumo de energia elétrica. Entre os equipamentos que mais geram esse tipo de custo estão
+        televisores e fornos microondas.</p>
+
+    <p>Se você tem dúvidas sobre a efetividade dessa ação, saiba que, não é novidade que <b> aparelhos ligados consomem
+        demais.</b> Faça um teste. Sabia que somente um decodificador de TV a cabo que é utilizado por poucas horas no dia,
+        mas fica o restante do tempo na tomada, pode gerar um custo adicional de quase cem reais anualmente?</p>
+
+    <h3>4. Tenha atenção ao estado dos eletrodomésticos</h3>
+
+    <p>Manter seus eletrodomésticos em boas condições é fundamental para não gerar desperdício de energia elétrica. Por
+        isso, é importante adotar práticas como verificar se a borracha da geladeira apresenta boa vedação e limpar
+        regularmente filtros de máquinas de lavar e condicionares de ar.</p>
+
+    <h3>5. Diminua o uso de aparelhos como ferro elétrico, chuveiro e máquina de lavar</h3>
+
+    <p>Na composição de uma conta de luz, o uso de máquina de lavar e do chuveiro estão entre os campeões em elevar
+        custos.</p>
+
+    <p>Para reduzir seu consumo, dê preferência a passar mais roupas por vez do que passar uma peça a cada ligada do
+        ferro. Ao utilizar o chuveiro, sempre que possível, utilize a função Verão e tente diminuir o tempo de seus
+        banhos. Para o caso da máquina de lavar, também busque juntar diversas peças para utilizar capacidade total do
+        equipamento, ao invés de lavar poucas peças por vez.</p>
+
+    <p>Com pequenas atitudes, é possível alcançar grandes resultados! Essas são formas simples de economizar energia,
+        reduzir sua conta de luz e, ainda, de ter atitudes mais sustentáveis em seu dia a dia.</p>
+
+    <h3 id="texto_terc"> <b>Se não econonomizarmos, por faltar energia!</b> </h3>
+
+
+    <img id="lampada" class="apagada" src="lampada_desligada.jpeg" alt="" title="Apagada">
+
+    <div class="botao">
+        <button id="botao" onclick="alterarestado();">Trocar!</button>
+    </div>
+    
+
+    <p id="cont">Total de acendimentos: </p>
+    <p id="cont_apagada">Quantas vezes a Lampada ficou Apagada: </p>
+    <p id="cont_ligada">Quantas vezes a Lampada ficou Ligada: </p>
+    <p id="cont_quebrou">Quantas vezes a Lampada ficou Quebrou: </p>
+    <p></p>
+
+    <p>Fonte: <a href="https://www.rioverde.com.br/empreendimentos-imobiliarios/formas-de-economizar-energia/">Rio Verde Empreendimentos</a></p>
+
+    <footer>
+        <p id="rodape">Desenvolvimento Web Básico - Avaliação 2º bimestre</p>
+    </footer>
+
+</body>
+
+</html>
